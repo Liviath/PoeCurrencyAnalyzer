@@ -1,0 +1,228 @@
+<?php
+
+namespace CoreBundle\Entity;
+
+/**
+ * User
+ */
+class User
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $loginname;
+
+    /**
+     * @var string
+     */
+    private $password;
+
+    /**
+     * @var string
+     */
+    private $salt;
+
+    /**
+     * @var \DateTime
+     */
+    private $createdOn;
+
+    /**
+     * @var \DateTime
+     */
+    private $lastLogin;
+
+    /**
+     * @var string
+     */
+    private $poeAccountName;
+
+    /**
+     * @var \CoreBundle\Entity\Scan
+     */
+    private $scan;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set loginname
+     *
+     * @param string $loginname
+     *
+     * @return User
+     */
+    public function setLoginname($loginname)
+    {
+        $this->loginname = $loginname;
+
+        return $this;
+    }
+
+    /**
+     * Get loginname
+     *
+     * @return string
+     */
+    public function getLoginname()
+    {
+        return $this->loginname;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return User
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     *
+     * @return User
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+
+        return $this;
+    }
+
+    /**
+     * Get salt
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return $this->salt;
+    }
+
+    /**
+     * Set createdOn
+     *
+     * @param \DateTime $createdOn
+     *
+     * @return User
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->createdOn = $createdOn;
+
+        return $this;
+    }
+
+    /**
+     * Get createdOn
+     *
+     * @return \DateTime
+     */
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
+
+    /**
+     * Set lastLogin
+     *
+     * @param \DateTime $lastLogin
+     *
+     * @return User
+     */
+    public function setLastLogin($lastLogin)
+    {
+        $this->lastLogin = $lastLogin;
+
+        return $this;
+    }
+
+    /**
+     * Get lastLogin
+     *
+     * @return \DateTime
+     */
+    public function getLastLogin()
+    {
+        return $this->lastLogin;
+    }
+
+    /**
+     * Set poeAccountName
+     *
+     * @param string $poeAccountName
+     *
+     * @return User
+     */
+    public function setPoeAccountName($poeAccountName)
+    {
+        $this->poeAccountName = $poeAccountName;
+
+        return $this;
+    }
+
+    /**
+     * Get poeAccountName
+     *
+     * @return string
+     */
+    public function getPoeAccountName()
+    {
+        return $this->poeAccountName;
+    }
+
+    /**
+     * Set scan
+     *
+     * @param \CoreBundle\Entity\Scan $scan
+     *
+     * @return User
+     */
+    public function setScan(\CoreBundle\Entity\Scan $scan = null)
+    {
+        $this->scan = $scan;
+
+        return $this;
+    }
+
+    /**
+     * Get scan
+     *
+     * @return \CoreBundle\Entity\Scan
+     */
+    public function getScan()
+    {
+        return $this->scan;
+    }
+}

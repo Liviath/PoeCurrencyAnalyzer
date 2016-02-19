@@ -1,0 +1,33 @@
+CoreBundle\Entity\User:
+  type: entity
+  table: users
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    loginname:
+      type: string
+      length: 32
+    password:
+      type: string
+      length: 32
+    salt:
+      type: string
+      length: 32
+    createdOn:
+      name: created_on
+      type: datetime
+    lastLogin:
+      name: last_login
+      type: datetime
+    poeAccountName:
+      name: poe_account_name
+      type: string
+      length: 32
+  manyToOne:
+    scan:
+      targetEntity: Scan
+      joinColumn:
+        name: scan_id
+        referencedColumnName: id

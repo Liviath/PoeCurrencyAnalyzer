@@ -1,0 +1,11 @@
+CoreBundle\Entity\CurrencyItem:
+  type: entity
+  table: currency_items
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 32
